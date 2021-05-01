@@ -123,6 +123,6 @@ function run (tagName, attributes, children) {
   }
 }
 
-export const t = function (n, a, c) {
+export var t = function (n, a, c) {
   return run(n, a, c)
 }
