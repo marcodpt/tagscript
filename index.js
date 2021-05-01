@@ -1,4 +1,4 @@
-Tags = Tags || {}
+var Tags = {}
 
 var escapeHtml = function (unsafe) {
   var t = typeof unsafe
