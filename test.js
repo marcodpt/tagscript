@@ -266,7 +266,6 @@ QUnit.test("t", function (assert) {
 })
 
 QUnit.test("define tags", function (assert) {
-  var tag = t
   assert.equal(t('a', {
     href: 'www.google.com'
   }, 'google!'), `<a href="www.google.com">google!</a>`)
@@ -281,7 +280,7 @@ QUnit.test("define tags", function (assert) {
     tag: "div"
   }, 'Hello'), `<deep n="5" tag="div">Hello</deep>`)
 
-  t = t('super', function (t, attr, html) {
+  t('super', function (t, attr, html) {
     return t('div', {
       class: 'super'
     }, [
@@ -305,7 +304,7 @@ QUnit.test("define tags", function (assert) {
     tag: "div"
   }, 'Hello'), `<deep n="5" tag="div">Hello</deep>`)
 
-  t = t('hyper', function (t, attr, html) {
+  t('hyper', function (t, attr, html) {
     return t('div', {
       class: 'hyper'
     }, [
@@ -333,7 +332,7 @@ QUnit.test("define tags", function (assert) {
     tag: "div"
   }, 'Hello'), `<deep n="5" tag="div">Hello</deep>`)
 
-  t = tag('deep', function (t, attrs, html) {
+  t('deep', function (t, attrs, html) {
     if (attrs.n) {
       attrs.n = parseInt(attrs.n) - 1
       return t(attrs.tag || 'span', {}, [

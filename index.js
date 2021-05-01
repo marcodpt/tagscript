@@ -114,6 +114,10 @@ function run (tagName, attributes, children) {
     return function (t, a, c) {
       return run(t, a, c)
     }
+  } else if (attributes === null) {
+    if (Tags[tagName] != null) {
+      delete Tags[tagName]
+    }
   } else if (Tags[H[0]]) {
     return Tags[H[0]](function (t, a, c) {
       return run(t, a, c)
