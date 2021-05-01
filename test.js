@@ -332,6 +332,8 @@ QUnit.test("define tags", function (assert) {
     tag: "div"
   }, 'Hello'), `<deep n="5" tag="div">Hello</deep>`)
 
+  t('super', null)
+  t('hyper', null)
   t('deep', function (t, attrs, html) {
     if (attrs.n) {
       attrs.n = parseInt(attrs.n) - 1
