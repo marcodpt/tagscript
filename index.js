@@ -73,7 +73,7 @@ var h = function (tagName, attributes, children) {
     return attr.length > 0
   })
 
-  html = '<'+tagName
+  var html = '<'+tagName
   if (X.length) {
     html = ident(html, X, '', maxLine)
   }
