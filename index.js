@@ -127,4 +127,4 @@ const t = function (t, a, c) {
   return run(t, a, c)
 }
 
-export t
+export {t}
