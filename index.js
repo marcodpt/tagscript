@@ -128,6 +128,5 @@ function run (tagName, attributes, children) {
 }
 
 export default function (n, a, c) {
-  console.log(Object.keys(Tags))
   return run(n, a, c)
 }
