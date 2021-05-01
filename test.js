@@ -1,4 +1,4 @@
-import {t} from './index.js'
+import t from './index.js'
 
 QUnit.test("t", function (assert) {
   assert.equal(t('a'), '<a/>')
