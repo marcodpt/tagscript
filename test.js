@@ -1,6 +1,5 @@
-import u from './index.js'
+import t from './index.js'
 
-var t = u
 QUnit.test("t", function (assert) {
   assert.equal(t('a'), '<a/>')
   assert.equal(t('a', {
@@ -282,7 +281,7 @@ QUnit.test("define tags", function (assert) {
     tag: "div"
   }, 'Hello'), `<deep n="5" tag="div">Hello</deep>`)
 
-  t = t('super', function (tag, attr, html) {
+  t = t('super', function (t, attr, html) {
     return t('div', {
       class: 'super'
     }, [
@@ -306,7 +305,7 @@ QUnit.test("define tags", function (assert) {
     tag: "div"
   }, 'Hello'), `<deep n="5" tag="div">Hello</deep>`)
 
-  t = t('hyper', function (tag, attr, html) {
+  t = t('hyper', function (t, attr, html) {
     return t('div', {
       class: 'hyper'
     }, [
@@ -334,7 +333,7 @@ QUnit.test("define tags", function (assert) {
     tag: "div"
   }, 'Hello'), `<deep n="5" tag="div">Hello</deep>`)
 
-  t = tag('deep', function (tag, attrs, html) {
+  t = tag('deep', function (t, attrs, html) {
     if (attrs.n) {
       attrs.n = parseInt(attrs.n) - 1
       return t(attrs.tag || 'span', {}, [
