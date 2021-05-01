@@ -1,5 +1,6 @@
-import t from './index.js'
+import u from './index.js'
 
+var t = u
 QUnit.test("t", function (assert) {
   assert.equal(t('a'), '<a/>')
   assert.equal(t('a', {
