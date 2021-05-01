@@ -266,7 +266,7 @@ QUnit.test("t", function (assert) {
 })
 
 QUnit.test("define tags", function (assert) {
-  const tag = t
+  var tag = t
   assert.equal(t('a', {
     href: 'www.google.com'
   }, 'google!'), `<a href="www.google.com">google!</a>`)
